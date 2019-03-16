@@ -2,8 +2,8 @@ export default `
   type Comment {
     _id: String!
     body: String!
-    article: [Article!]!
-    author: [User!]!
+    article: Article!
+    author: User!
   }
 
   type Query {
@@ -19,6 +19,8 @@ export default `
 
   input CreateCommentInput {
     body: String!
+    article: ID!
+    author: ID!
   }
   
   input UpdateCommentInput {

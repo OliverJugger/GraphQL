@@ -53,7 +53,7 @@ export default {
   },
   Comment: {
     article: async ({ article }, args, context, info) => {
-      return await Article.find({ article });
+      return await Article.findById(article);
     },
     author: async ({ author }, args, context, info) => {
       return await User.findById(author);
